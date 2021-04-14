@@ -5,15 +5,14 @@ def changeName(path, new_name):
     '''파일명을 바꿔주는 함수입니다.'''
     i = 1
     for filename in os.listdir(path):
-        os.rename(path + filename, path + str(new_name) + str(i) + '.jpg')
+        os.rename(path + filename, path + str(new_name) + '.jpg')
         i += 1
 
-load_wb = load_workbook(".xlsx", data_only=True)
+load_wb = load_workbook("C:\Users\IDH\Desktop\changename\Book1.xlsx", data_only=True)
 load_ws = load_wb['Sheet1']
-get_cells = load_ws[ : ]
+get_cells = load_ws['B2':'B6']
 
 for row in get_cells:
     for cell in row:
         new_name=cell.value
-        changeName('', new_name)
-
+        changeName('C:\Users\IDH\Desktop\changename\sample', new_name)
