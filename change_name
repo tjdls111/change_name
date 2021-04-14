@@ -2,14 +2,14 @@ import os
 from openpyxl import load_workbook
 
 
-path='C:\\Users\\IDH\\Desktop\\changename\\sample\\'
+path='C:\\Users\\IDH\\Desktop\\인물섬유이름바꾸기\\인물-섬유\\'
 file_names = os.listdir(path)
 
-load_wb = load_workbook(r"C:\Users\IDH\Desktop\changename\Book1.xlsx", data_only=True)
-load_ws = load_wb['Sheet1']
-get_cells = load_ws['B2':'B6']
+load_wb = load_workbook(r"C:\Users\IDH\Desktop\인물섬유이름바꾸기\인물-섬유.xlsx", data_only=True)
+load_ws = load_wb['관심소장품']
+get_cells = load_ws['D2':'D800']
 print(get_cells)
-for i in range(5):
+for i in range(799):
     if 'zip' in file_names[i]:
         os.rename(path+file_names[i],path+str(get_cells[i][0].value)+'.zip')
     else:
