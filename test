@@ -1,0 +1,19 @@
+import os
+from openpyxl import load_workbook
+
+def changeName(path, new_name):
+    '''파일명을 바꿔주는 함수입니다.'''
+    i = 1
+    for filename in os.listdir(path):
+        os.rename(path + filename, path + str(new_name) + str(i) + '.jpg')
+        i += 1
+
+load_wb = load_workbook(".xlsx", data_only=True)
+load_ws = load_wb['Sheet1']
+get_cells = load_ws[ : ]
+
+for row in get_cells:
+    for cell in row:
+        new_name=cell.value
+        changeName('', new_name)
+
