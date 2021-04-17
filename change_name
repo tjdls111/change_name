@@ -2,8 +2,8 @@ import os
 from openpyxl import load_workbook
 
 
-path='C:\\Users\\A\\OneDrive\\OneDrive - 한국전통문화대학교\\Desktop\\인물_섬유(완성)\\구-008582\\' #파일 경로입력하기(이미지들 모인 곳)
+path='C:\\Users\\A\\' #파일 경로입력하기(이미지들 모인 곳)
 file_names = os.listdir(path)
 
-for i in range(2):
-        os.rename(path + file_names[i], path + '구-008582' +'('+str(i+1)+')'+ '.jpg')
+for i in range(2): #이름 바꿔줄 파일 갯수
+        os.rename(path + file_names[i], path + '구-008582' +'('+str(i+1)+')'+ '.jpg')  #구-008582(1), 구-008582(2) 이런 식으로 파일명 
