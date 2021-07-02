@@ -2,7 +2,7 @@ import os
 from openpyxl import load_workbook 
 
 
-path='파일경로' #파일 경로입력하기(이미지들 모인 곳)
+path=r'파일경로' #파일 경로입력하기(이미지들 모인 곳)
 file_names = os.listdir(path)
 
 load_wb = load_workbook(r"파일경로\엑셀제목.xlsx", data_only=True) #엑셀 파일 경로, 이름
